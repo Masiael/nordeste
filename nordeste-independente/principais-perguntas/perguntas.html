@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordeste Independente | Perguntas e Respostas</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="imagens/bandeira-nei.jpg" type="image/x-icon">
+
+    <!--footer-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css"> <!--final-->
+
+  <style>
+
+body {
+  background-color: #0A2344;
+  font-family: 'rubik', sans-serif;
+ 
+}
+
+/* Alinha o texto do título ao centro */
+
+    h1 {
+  text-align: center;
+}
+
+/* Define a largura do acordeão. Define a margem para 90px na parte superior e inferior e automática à esquerda e à direita */
+
+
+.accordion {
+  width: 100%;
+  max-width: 800px;
+  margin: 90px auto;
+  color: black;
+  background-color: white;
+  padding: 45px 45px;
+  
+  
+}
+
+.accordion .container {
+  position: relative;
+  margin: 10px 10px;
+}
+
+.accordion .label {
+  position: relative;
+  padding: 10px 0;
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+.accordion .label::before {
+  content: '+';
+  color: black;
+  position: absolute;
+  top: 50%;
+  right: -5px;
+  font-size: 30px;
+  transform: translateY(-50%);
+}
+
+/* Oculta o conteúdo (altura: 0), diminui o tamanho da fonte, justifica o texto e adiciona transição */
+
+.accordion .content {
+  position: relative;
+  background: white;
+  height: 0;
+  font-size: 20px;
+  text-align: justify;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+/* Adiciona uma linha horizontal entre o conteúdo */
+
+.accordion hr {
+  width: 100%;
+  margin-left: 0;
+  border: 1px solid grey;
+}
+
+.accordion .container.active .content {
+  height: 150px;
+}
+
+/* Muda de sinal de mais para sinal negativo uma vez ativo */
+
+.accordion .container.active .label::before {
+  content: '-';
+  font-size: 30px;
+}
+
+/* Media query para telas menores */
+
+@media (max-width: 600px) {
+  .accordion {
+    padding: 20px;
+  }
+
+  .accordion .label {
+    font-size: 24px;
+  }
+
+  .accordion .content {
+    font-size: 18px;
+  }
+}
+</style>
+  </style>
+</head>
+<body>
+     <!--Menu-->
+
+     <!--Menu-->
+  
+     <header class="scrollable">
+      <div class="header-content">
+          <a href="../../index.html" class="logo-menu"><img src="imagens/Logo-NEI-redimensionada-circular.png" class="logodonei"
+                                              alt="logo"></a>
+          <input type="checkbox" id="menu-bar">
+          <label for="menu-bar">MENU</label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../../index.html">INÍCIO</a></li>
+                <li><a href="#">NORDESTE INDEPENDENTE</a>
+                    <ul>
+                      <li><a href="#">Apresentação&rarr;</a>
+                        <ul>
+                            <li><a href="../apresentacao/apresentacao.html">Apresentação</a></li>
+                            <li><a href="../apresentacao/inspiracao.html">Inspiração</a></li>
+                            <li><a href="../apresentacao/motivacao.html">Motivação</a></li>
+                            <li><a href="../apresentacao/viabilizacao.html">Viabilização</a></li>
+                          </ul>
+
+                        <li><a href="../carta-de-principios/carta-de-principios.html">Carta de Princípios</a></li>
+                        <li><a href="../estatuto-oficial/estatuto-oficial.html">Estatuto Social</a></li>
+                        <li><a href="../fundamentos/fundamentos.html">Fundamentação</a></li>
+                        <li><a href="../objetivos/objetivos.html">Objetivos</a></li>
+                        <li><a href="../organizacao/organizacao.html">Organização</a></li>
+                        <li><a href="perguntas.html">Principais Perguntas</a></li>
+                        <li><a href="#">Símbolos&rarr;</a>
+                          <ul>
+                              <li><a href="../simbolos/bandeira.html">Bandeira</a></li>
+                              <li><a href="../simbolos/lema.html">Lema</a></li>
+                              <li><a href="#">Selo</a></li>
+                            </ul>
+                        
+                    </ul>
+                </li>
+                <li><a href="#">GRUPO DE ESTUDOS</a>
+                    <ul>
+                        <li><a href="#">Avaliação&rarr;</a>
+                        <ul>
+                            <li><a href="#">Avaliação</a></li>
+                            <li><a href="#">Enquetes</a></li>
+                            <li><a href="#">Estudos</a></li>
+                            <li><a href="#">Levantamentos</a></li>
+                            <li><a href="#">Resenhas</a></li>
+                            
+                        </ul>
+                        </li>
+
+                        <li><a href="#">História&rarr;</a>
+                          <ul>
+                              <li><a href="#">História</a></li>
+                              <li><a href="">Ícones Históricos</a></li>
+                              <li><a href="grupo-de-estudos/calendario/linha-cronologica.html">Linha do Tempo</a></li>
+                              <li><a href="#">Mapas</a></li>
+                            </ul>
+
+                            <li><a href="#">Investigação&rarr;</a>
+                              <ul>
+                                  <li><a href="#">Artigos</a></li>
+                                  <li><a href="#">Documentos</a></li>
+                                  <li><a href="#">Livros</a></li>
+                                  <li><a href="#">Vídeos</a></li>
+                                </ul>
+
+                                <li><a href="#">Medidas</a></li>
+                                
+                                <li><a href="#">Propostas&rarr;</a>
+                                  <ul>
+                                      <li><a href="#">Constituição</a></li>
+                                      <li><a href="#">Forma de Governo</a></li>
+                                      <li><a href="#">Organização Política</a></li>
+                                    </ul>
+
+                        <li><a href="grupo-de-estudos/biografias/biografia.html">Biografias</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">GRUPOS DE AÇÃO</a>
+
+                    <ul>
+                        <li><a href="#">Atividades&rarr;</a>
+                          <ul>
+                              <li><a href="#">Campanhas</a></li>
+                              <li><a href="#">Concursos</a></li>
+                              <li><a href="#">Cursos</a></li>
+                              <li><a href="#">Encontros</a></li>
+                              <li><a href="#">Iniciativas</a></li>
+                            </ul>
+                        
+                        <li><a href="#">Diretórios Estaduais&rarr;</a>
+                            <ul>
+                                <li><a href="grupos-de-acao/diretorios-estaduais/alagoas/alagoas.html">Alagoas</a></li>
+                                <li><a href="grupos-de-acao/diretorios-estaduais/bahia/bahia.html">Bahia</a></li>
+                                <li><a href="/grupos-de-acao/diretorios-estaduais/ceara/">Ceará</a></li>
+                                <li><a href="grupos-de-acao/diretorios-estaduais/maranhão/maranhao.html">Maranhão</a></li>
+                                <li><a href="#">Norte de Minas</a></li>
+                                <li><a href="grupos-de-acao/diretorios-estaduais/paraiba/paraiba.html">Paraíba</a></li>
+                                <li><a href="grupos-de-acao/diretorios-estaduais/pernambuco/pernambuco.html">Pernambuco</a></li>
+                                <li><a href="grupos-de-acao/diretorios-estaduais/piaui/piaui.html">Piauí</a></li>
+                                <li><a href="grupos-de-acao/diretorios-estaduais/rio-grande-norte/riogrande.html">Rio Grande</a></li>
+                                <li><a href="grupos-de-acao/diretorios-estaduais/sergipe/sergipe.html">Sergipe</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Iniciativas&rarr;</a>
+                          <ul>
+                              <li><a href="#">Alas Ideológicas</a></li>
+                              <li><a href="#">Além-Nordeste</a></li>
+                              <li><a href="#">Aliança Emancipacionista</a></li>
+                              <li><a href="#">Frente Nordestina</a></li>
+                            </ul>
+                    </ul>
+                </li>
+
+                <li><a href="#">NAÇÃO NORDESTINA</a>
+                    <ul>
+                        <li><a href="#">Manifesto</a></li>
+                        <li><a href="#">Nordestinidade</a></li>
+                     
+                    </ul>
+                </li>
+                <li><a href="#">CONTEÚDOS</a>
+                    <ul>
+                      <li><a href="#">Materiais&rarr;</a>
+                        <ul>
+                            <li><a href="#">Artes</a></li>
+                            <li><a href="#">Panfletos</a></li>
+                            <li><a href="#">Seminários</a></li>
+                            
+                          </ul>
+                          <li><a href="#">Mídias&rarr;</a>
+                            <ul>
+                                <li><a href="#">Áudios</a></li>
+                                <li><a href="#">Fotos</a></li>
+                                <li><a href="#">Música</a></li>
+                                <li><a href="#">Vídeos</a></li>
+                              </ul>
+                              <li><a href="#">Publicações&rarr;</a>
+                                <ul>
+                                    <li><a href="#">Meios de Comunicação</a></li>
+                                    <li><a href="#">Entrevistas</a></li>
+                                  </ul>
+                                  <li><a href="#">Registros</a>
+                    </ul>
+                </li>
+                <li><a href="#">CONTATOS</a>
+                    <ul>
+                        <li><a href="#">Administração</a></li>
+                        <li><a href="#">Associação</a></li>
+                        <li><a href="#">Cadastramento</a></li>
+                        <li><a href="#">Doação</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">LOJA</a></li>
+            </ul>
+        </nav>
+    </header> <!--Final de Menu-->
+
+      <!--CONTEÚDO DE PERGUNTAS-->
+
+      <div class="accordion-body">
+        <div class="accordion">
+          <h1>Perguntas e Respostas</h1>
+          <hr>
+          <div class="container">
+            <div class="label">Separar-se é constitucional?</div>
+            <div class="content">Hypertext M</div>
+          </div>
+          <hr>
+          <div class="container">
+            <div class="label">O movimento alinha-se à direita ou à esquerda?</div>
+            <div class="content">.
+      </div>
+          </div>
+          <hr>
+          <div class="container">
+            <div class="label">Quem assumirá o governo?</div>
+            <div class="content"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quae vero rerum, cupiditate quod quidem veniam fugit qui modi autem explicabo non eum blanditiis laboriosam aspernatur itaque, inventore voluptatem similique.</div>
+          </div>
+          <hr>
+          <div class="container">
+            <div class="label">Como se chamará o país?</div>
+            <div class="content">JavaScript </div>
+          </div>
+          <hr>
+          <div class="container">
+            <div class="label">É possível sobreviver sem o restante do Brasil?</div>
+            <div class="content">R. </div>
+          </div>
+          <hr>
+          <div class="container">
+            <div class="label">E se o país fracassar?</div>
+            <div class="content">Pm.</div>
+          </div>
+          <hr>
+          <div class="container">
+            <div class="label">Correr o risco é realmente necessário?</div>
+            <div class="content">" paradigm</div>
+          </div>
+          <hr>
+        </div>
+    </div>
+      
+        <!--JS DO ACCORDION-->
+        <script src="index.js" type="text/javascript"></script>
+    
+     <!--ARTIGOS RELACIONADOS-->
+    <h2 style="padding-top: 50px;
+    padding-bottom: 0px;">Artigos Relacionados</h2>
+    <div class="artigos-relacionados">
+      <div class="artigo">
+        <h2>Símbolos</h2>
+        <img class="#" src="" alt="">
+        <p>A Bandeira Do Nordeste Independente É Apresentada Pelo Movimento Para Representar Suas Ações E Legitimar A Construção Da Identidade Nordestina Por Meio De Suas Cores Características, Seu Significado Específico E Sua Causa De Autodeterminação.</p>
+        <a href="../simbolos/simbolos.html">Leia mais</a>
+      </div>
+      <div class="artigo">
+        <h2>Estatuto Oficial</h2>
+        <p>Descrição breve do Artigo 2.</p>
+        <a href="link-do-artigo-2">Leia mais</a>
+      </div>
+      <div class="artigo">
+        <h2>Objetivos</h2>
+        <p>Perguntas e Respostas</p>
+        <a href="link-do-artigo-3">Leia mais</a>
+      </div>
+    </div>
+
+
+    <!--Rodapé do site-->
+
+    <footer>
+      <div id="footer_content">
+          <div id="footer_contacts">
+               <img src="imagens/Logo-NEI-redimensionada-circular.png" class="img-footer"  alt="">
+          
+              <div id="footer_social_media">
+                  <a href="#" class="footer-link" id="instagram">
+                      <i class="fa-brands fa-instagram"></i>
+                  </a>
+  
+                  <a href="#" class="footer-link" id="facebook">
+                      <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+  
+                  <a href="#" class="footer-link" id="whatsapp">
+                      <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+              </div>
+          </div>
+          
+          <ul class="footer-list">
+              <li>
+                  <h3>INSTITUCIONAL</h3>
+              </li>
+              <li>
+                  <a href="../apresentacao/apresentacao.html" class="footer-link">Apresentação</a>
+              </li>
+              <li>
+                  <a href="carta-de-principios.html" class="footer-link">Carta de Princípios</a>
+              </li>
+              <li>
+                  <a href="#" class="footer-link">Estatuto Oficial</a>
+              </li>
+          </ul>
+  
+          <ul class="footer-list">
+              <li>
+                  <h3>CONTEÚDO</h3>
+              </li>
+              <li>
+                  <a href="#" class="footer-link">Biblioteca</a>
+              </li>
+              <li>
+                  <a href="#" class="footer-link">Notas Oficiais</a>
+              </li>
+              <li>
+                  <a href="#" class="footer-link">Perguntas e Respostas</a>
+              </li>
+          </ul>
+  
+          <div id="footer_subscribe">
+              <h3>INSCREVE-SE</h3>
+  
+              <p>
+                  Cadastre-se para receber conteúdos exclusivos! Notícias sobre o movimento e outros informes. 
+              </p>
+  
+              <div id="input_group">
+                  <input type="email" id="email">
+                  <button>
+                      <i class="fa-regular fa-envelope"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+  
+      <div id="footer_copyright">
+          &#169 2023 Nordeste Independente
+      </div>
+  </footer>
+  
+</body>
+</html>

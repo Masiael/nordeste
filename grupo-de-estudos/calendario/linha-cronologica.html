@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordeste Independente</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" href="../../imagens/Logo-NEI-redimensionada-circular.png" type="image/x-icon">
+
+    <!--footer-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css"> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://cdn.lineicons.com/1.0.1/LineIcons.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600&amp;display=swap'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css'><link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="Logo-NEI-redimensionada-circular.png" type="image/x-icon">
+    <style>
+        * {
+      box-sizing: border-box;
+    }
+    
+    html {
+      font-size: 14px;
+    }
+    
+    body {
+      background: #f6f9fc;
+      font-family: "Open Sans", sans-serif;
+      color: #525f7f;
+    }
+    
+    h1 {
+      margin: 5%;
+      text-align: center;
+      font-size: 4rem;
+      font-weight: 100;
+    }
+    
+    h2 {
+      margin: 4%;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 10;
+      top: 0;
+    }
+    
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      margin: 20px auto;
+      position: relative;
+    }
+    .timeline__event {
+      margin-bottom: 20px;
+      position: relative;
+      display: flex;
+      margin: 20px 0;
+      border-radius: 6px;
+      align-self: center;
+      width: 50vw;
+    }
+    .timeline__event:nth-child(2n+1) {
+      flex-direction: row-reverse;
+    }
+    .timeline__event:nth-child(2n+1) .timeline__event__date {
+      border-radius: 0 6px 6px 0;
+    }
+    .timeline__event:nth-child(2n+1) .timeline__event__content {
+      border-radius: 6px 0 0 6px;
+    }
+    .timeline__event:nth-child(2n+1) .timeline__event__icon:before {
+      content: "";
+      width: 2px;
+      height: 100%;
+      background: #000000;
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      right: auto;
+      z-index: -1;
+      transform: translateX(-50%);
+      -webkit-animation: fillTop 2s forwards 4s ease-in-out;
+              animation: fillTop 2s forwards 4s ease-in-out;
+    }
+    .timeline__event:nth-child(2n+1) .timeline__event__icon:after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background: #000000;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      top: 50%;
+      left: auto;
+      transform: translateY(-50%);
+      -webkit-animation: fillLeft 2s forwards 4s ease-in-out;
+              animation: fillLeft 2s forwards 4s ease-in-out;
+    }
+    .timeline__event__title {
+      font-size: 1.2rem;
+      line-height: 1.4;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #000000;
+      letter-spacing: 1.5px;
+    }
+    .timeline__event__content {
+      padding: 20px;
+      box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+      background: #fff;
+      width: calc(40vw - 84px);
+      border-radius: 0 6px 6px 0;
+    }
+    .timeline__event__date {
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: 600;
+      background: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      padding: 0 20px;
+      border-radius: 6px 0 0 6px;
+    }
+    .timeline__event__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #000000;
+      padding: 20px;
+      align-self: center;
+      margin: 0 20px;
+      background: #333;
+      border-radius: 100%;
+      width: 40px;
+      box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
+      padding: 40px;
+      height: 40px;
+      position: relative;
+    }
+    .timeline__event__icon i {
+      font-size: 32px;
+    }
+    .timeline__event__icon:before {
+      content: "";
+      width: 2px;
+      height: 100%;
+      background: rgb(248, 244, 28);
+      position: absolute;
+      top: 0%;
+      z-index: -1;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-animation: fillTop 2s forwards 4s ease-in-out;
+              animation: fillTop 2s forwards 4s ease-in-out;
+    }
+    .timeline__event__icon:after {
+      content: "";
+      width: 100%;
+      height: 2px;
+      background: rgb(248, 244, 28);
+      position: absolute;
+      left: 0%;
+      z-index: -1;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-animation: fillLeftOdd 2s forwards 4s ease-in-out;
+              animation: fillLeftOdd 2s forwards 4s ease-in-out;
+    }
+    .timeline__event__description {
+      flex-basis: 100%;
+    }
+    .timeline__event--type2:after {
+      background: #000000;
+    }
+    .timeline__event--type2 .timeline__event__date {
+      color: #ffffff;
+      background: #000000;
+    }
+    .timeline__event--type2:nth-child(2n+1) .timeline__event__icon:before, .timeline__event--type2:nth-child(2n+1) .timeline__event__icon:after {
+      background: #000000;
+    }
+    .timeline__event--type2 .timeline__event__icon {
+      background: #333;
+      color: #ffffff;
+    }
+    .timeline__event--type2 .timeline__event__icon:before, .timeline__event--type2 .timeline__event__icon:after {
+      background: rgb(248, 244, 28);
+    }
+    .timeline__event--type2 .timeline__event__title {
+      color: #000000;
+    }
+    
+    .timeline__event--type3 .timeline__event__date {
+      color: #fff;
+      background-color: #000000;
+    }
+    .timeline__event--type3:nth-child(2n+1) .timeline__event__icon:before, .timeline__event--type3:nth-child(2n+1) .timeline__event__icon:after {
+      background: #000000;
+    }
+    .timeline__event--type3 .timeline__event__icon {
+      background: #333;
+    }
+    .timeline__event--type3 .timeline__event__icon:before, .timeline__event--type3 .timeline__event__icon:after {
+      background: rgb(248, 244, 28);
+    }
+    .timeline__event--type3 .timeline__event__title {
+      color: #000000;
+    }
+    .timeline__event:last-child .timeline__event__icon:before {
+      content: none;
+    }
+    
+    @media (max-width: 786px) {
+      .timeline__event {
+        flex-direction: column;
+        align-self: center;
+      }
+      .timeline__event__content {
+        width: 100%;
+      }
+      .timeline__event__icon {
+        border-radius: 6px 6px 0 0;
+        width: 100%;
+        margin: 0;
+        box-shadow: none;
+      }
+      .timeline__event__icon:before, .timeline__event__icon:after {
+        display: none;
+      }
+      .timeline__event__date {
+        border-radius: 0;
+        padding: 20px;
+      }
+      .timeline__event:nth-child(2n+1) {
+        flex-direction: column;
+        align-self: center;
+      }
+      .timeline__event:nth-child(2n+1) .timeline__event__date {
+        border-radius: 0;
+        padding: 20px;
+      }
+      .timeline__event:nth-child(2n+1) .timeline__event__icon {
+        border-radius: 6px 6px 0 0;
+        margin: 0;
+      }
+    }
+    @-webkit-keyframes fillLeft {
+      100% {
+        right: 100%;
+      }
+    }
+    @keyframes fillLeft {
+      100% {
+        right: 100%;
+      }
+    }
+    @-webkit-keyframes fillTop {
+      100% {
+        top: 100%;
+      }
+    }
+    @keyframes fillTop {
+      100% {
+        top: 100%;
+      }
+    }
+    @-webkit-keyframes fillLeftOdd {
+      100% {
+        left: 100%;
+      }
+    }
+    @keyframes fillLeftOdd {
+      100% {
+        left: 100%;
+      }
+    }
+    </style>
+    <!--final footer-->
+  
+</head>
+<body class="secundario">
+    <!--Menu-->
+
+    <header class="scrollable">
+      <div class="header-content">
+          <a href="../../index.html" class="logo-menu"><img src="imagens/Logo-NEI-redimensionada-circular.png" class="logodonei"
+                                              alt="logo"></a>
+          <input type="checkbox" id="menu-bar">
+          <label for="menu-bar">MENU</label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../../index.html">INÍCIO</a></li>
+                <li><a href="#">NORDESTE INDEPENDENTE</a>
+                    <ul>
+                        <li><a href="#">Apresentação</a></li>
+                        <li><a href="../carta-de-principios/carta-de-principios.html">Carta de Princípios</a></li>
+                        <li><a href="../estatuto-oficial/estatuto-oficial.html">Estatuto Social</a></li>
+                        <li><a href="../fundamentos/fundamentos.html">Fundamentos</a></li>
+                        <li><a href="../historia/historia.html">História</a></li>
+                        <li><a href="../objetivos/objetivos.html">Objetivos</a></li>
+                        <li><a href="../organizacao/organizacao.html">Organização</a></li>
+                        <li><a href="../principais-perguntas/perguntas.html">Principais Perguntas</a></li>
+                        <li><a href="../simbolos/simbolos.html">Símbolos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">GRUPO DE ESTUDOS</a>
+                    <ul>
+                        <li><a href="#">Artigos</a></li>
+                        <li><a href="#">Calendário</a></li>
+                        <li><a href="../../grupo-de-estudos/biografias/biografia.html">Biografias</a></li>
+                        <li><a href="#">Locais Históricos</a></li>
+                        <li><a href="#">Livro</a></li>
+                        <li><a href="#">Mapas</a></li>
+                        <li><a href="#">Medidas</a></li>
+                        <li><a href="#">Propostas</a></li>
+                        <li><a href="#">Resenhas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">GRUPOS DE AÇÃO</a>
+                    <ul>
+                        <li><a href="#">Atividades</a></li>
+                        <li><a href="#">Diretórios Estaduais&rarr;</a>
+                            <ul>
+                                <li><a href="#">Alagoas</a></li>
+                                <li><a href="#">Bahia</a></li>
+                                <li><a href="#">Ceará</a></li>
+                                <li><a href="#">Maranhão</a></li>
+                                <li><a href="#">Norte de Minas</a></li>
+                                <li><a href="#">Paraíba</a></li>
+                                <li><a href="#">Pernambuco</a></li>
+                                <li><a href="#">Piauí</a></li>
+                                <li><a href="#">Rio Grande do Norte</a></li>
+                                <li><a href="#">Sergipe</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Eventos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">NAÇÃO NORDESTINA</a>
+                    <ul>
+                        <li><a href="#">Cultura</a></li>
+                        <li><a href="#">Identidade</a></li>
+                        <li><a href="#">Nacionalidade</a></li>
+                        <li><a href="#">Origem</a></li>
+                        <li><a href="#">Situação Atual</a></li>
+                        <li><a href="#">Território</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">CONTEÚDOS</a>
+                    <ul>
+                        <li><a href="#">Biblioteca</a></li>
+                        <li><a href="#">Galería</a></li>
+                        <li><a href="#">Multimídia</a></li>
+                        <li><a href="#">Videoteca</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">CONTATOS</a>
+                    <ul>
+                        <li><a href="#">Administração</a></li>
+                        <li><a href="#">Comunicação</a></li>
+                        <li><a href="#">Contato Com Jurídico</a></li>
+                        <li><a href="#">Doações</a></li>
+                        <li><a href="#">Filiação</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">LOJA</a></li>
+            </ul>
+        </nav>
+    </header> <!--Final de Menu-->
+
+        <!--SEÇÃO PRINCIPAL DO SITE-->
+
+        <!-- partial:index.partial.html -->
+<script src="https://kit.fontawesome.com/fc596df623.js" crossorigin="anonymous"></script>
+
+<h1>LUTAS E REBELIÕES NORDESTINAS</h1>
+<h2>As lutas e rebeliões nordestinas ao longo da história refletem a busca por justiça social e melhores condições de vida na região.</h2>
+
+<div class="timeline">
+
+	<!--first-->
+	<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+		<div class="timeline__event__icon ">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1549
+		</div>
+		<div class="timeline__event__content ">
+			<div class="timeline__event__title">
+				Cerco de Igarassu
+			</div>
+			<div class="timeline__event__description">
+				<p>O monumento deu início ao processo de colonização da região e, por conseqüência, do Brasil também.</p>
+			</div>
+		</div>
+	</div>
+
+	<!--second-->
+
+	<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1555 – 1673
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Guerra dos Aimorés
+			</div>
+			<div class="timeline__event__description">
+				<p>Nordeste de Minas Gerais, Norte do Espírito Santo e Extremo Sul da Bahia</p>
+			</div>
+		</div>
+	</div>
+
+	<!--third-->
+
+	<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1574 – 1599
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Guerra dos Potiguaras
+			</div>
+			<div class="timeline__event__description">
+				<p>Atuais Estados do Rio Grande do Norte, Paraíba, Ceará e Pernambuco</p>
+			</div>
+
+		</div>
+	</div>
+
+	<!--forth-->
+
+	<div class="timeline__event animated fadeInUp timeline__event--type1">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1580 – 1695
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Quilombos e Guerra dos Palmares
+			</div>
+			<div class="timeline__event__description">
+				<p>Zona da Mata Norte Alagoana e Zona da Mata Sul Pernambucana</p>
+			</div>
+		</div>
+	</div>
+
+	<!--first-->
+	<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+		<div class="timeline__event__icon ">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1595
+		</div>
+		<div class="timeline__event__content ">
+			<div class="timeline__event__title">
+				Saque do Recife
+			</div>
+			<div class="timeline__event__description">
+				<p>Recife, Pernambuco</p>
+			</div>
+		</div>
+	</div>
+
+	<!--second-->
+
+	<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1612 – 1615
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				França Equinocial
+			</div>
+			<div class="timeline__event__description">
+				<p>São Luís, Maranhão</p>
+			</div>
+		</div>
+	</div>
+
+	<!--third-->
+
+	<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			13/06/1645 - 26/01/1654 
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+            	Insurreição Pernambucana
+			</div>
+			<div class="timeline__event__description">
+				<p>Pernambuco - 13/06/1645, Batalha do Monte das Tabocas, Vitória de Santo Antão – 26/01/1654 (assinatura da rendição holandesa). </p>
+			</div>
+
+		</div>
+	</div>
+
+	<!--forth-->
+
+	<div class="timeline__event animated fadeInUp timeline__event--type1">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1666
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Conjuração de “Nosso Pai”
+			</div>
+			<div class="timeline__event__description">
+				<p>Conjuração de “Nosso Pai”	1666	Olinda e Recife, Pernambuco</p>
+			</div>
+		</div>
+	</div>
+
+	<!--first-->
+	<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+		<div class="timeline__event__icon ">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1682 - 1713
+		</div>
+		<div class="timeline__event__content ">
+			<div class="timeline__event__title">
+				Confederação dos Cariris
+			</div>
+			<div class="timeline__event__description">
+				<p>Sertões do Ceará, Rio Grande do Norte e Paraíba</p>
+			</div>
+		</div>
+	</div>
+
+	<!--second-->
+
+	<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1684
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Revolta de Beckman
+			</div>
+			<div class="timeline__event__description">
+				<p>São Luís, Maranhão</p>
+			</div>
+		</div>
+	</div>
+
+	<!--third-->
+
+	<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1710 – 1711
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Guerra dos Mascates
+			</div>
+			<div class="timeline__event__description">
+				<p>Guerra dos Mascates	1710 – 1711	Olinda e Recife, Pernambuco</p>
+			</div>
+
+		</div>
+	</div>
+
+	<!--forth-->
+
+	<div class="timeline__event animated fadeInUp timeline__event--type1">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1711
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Motins do Maneta
+			</div>
+			<div class="timeline__event__description">
+				<p>Salvador, Bahia</p>
+			</div>
+		</div>
+	</div>
+
+	<!--first-->
+	<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+		<div class="timeline__event__icon ">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1712 – 1719
+		</div>
+		<div class="timeline__event__content ">
+			<div class="timeline__event__title">
+				Revolta de Mandu Ladino	1712 – 1719	Piauí, Ceará e Maranhão
+			</div>
+			<div class="timeline__event__description">
+				<p>Piauí, Ceará e Maranhão</p>
+			</div>
+		</div>
+	</div>
+
+	<!--second-->
+
+	<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1736
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Motins do Sertão do São Francisco
+			</div>
+			<div class="timeline__event__description">
+				<p>Norte de Minas Gerais</p>
+			</div>
+		</div>
+	</div>
+
+	<!--third-->
+
+	<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1798
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+                Conjuração Baiana 
+			</div>
+			<div class="timeline__event__description">
+				<p>Salvador, Bahia</p>
+			</div>
+
+		</div>
+	</div>
+
+	<!--forth-->
+
+	<div class="timeline__event animated fadeInUp timeline__event--type1">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1801
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Conspiração dos Suassunas
+			</div>
+			<div class="timeline__event__description">
+				<p>Olinda e Itambé, Pernambuco</p>
+			</div>
+		</div>
+	</div>
+
+	<!--first-->
+	<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+		<div class="timeline__event__icon ">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+            06/03/1817
+		</div>
+		<div class="timeline__event__content ">
+			<div class="timeline__event__title">
+				Revolução Pernambucana
+			</div>
+			<div class="timeline__event__description">
+				<p>Atuais Estados de Pernambuco, Alagoas, Rio Grande do Norte, Paraíba e Ceará, além do Oeste baiano.</p>
+			</div>
+		</div>
+	</div>
+
+	<!--second-->
+
+	<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			10/02/1821
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Revolta Liberal da Bahia
+			</div>
+			<div class="timeline__event__description">
+				<p>Bahia</p>
+			</div>
+		</div>
+	</div>
+
+	<!--third-->
+
+	<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			29/08/1821
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Convenção de Beberibe
+			</div>
+			<div class="timeline__event__description">
+				<p>Pernambuco</p>
+			</div>
+
+		</div>
+	</div>
+
+	<!--forth-->
+
+	<div class="timeline__event animated fadeInUp timeline__event--type1">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			02/07/1824
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Confederação do Equador
+			</div>
+			<div class="timeline__event__description">
+				<p>Atuais Estados de Pernambuco, Alagoas, Rio Grande do Norte, Paraíba e Ceará, Sergipe, Piauí, além do Oeste baiano. A pretensão do Movimento era incluir a região desde a Província da Bahia até o Grão-Pará</p>
+			</div>
+		</div>
+	</div>
+
+	<!--first-->
+	<div class="timeline__event  animated fadeInUp delay-3s timeline__event--type1">
+		<div class="timeline__event__icon ">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1828 – 1880
+		</div>
+		<div class="timeline__event__content ">
+			<div class="timeline__event__title">
+				República de Pastos Bons
+			</div>
+			<div class="timeline__event__description">
+				<p>Sul dos atuais Estados do Piauí e Maranhão, sudeste do Pará e o Tocantins</p>
+			</div>
+		</div>
+	</div>
+
+	<!--second-->
+
+	<div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1832 – 1834
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Cabanada
+			</div>
+			<div class="timeline__event__description">
+				<p>Alagoas e Pernambuco</p>
+			</div>
+		</div>
+	</div>
+
+	<!--third-->
+
+	<div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1833
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Federação do Guanais
+			</div>
+			<div class="timeline__event__description">
+				<p>São Félix e Cachoeira, Bahia</p>
+			</div>
+
+		</div>
+	</div>
+	<!--forth-->
+
+	<div class="timeline__event animated fadeInUp timeline__event--type1">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1835
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Revolta dos Malês
+			</div>
+			<div class="timeline__event__description">
+				<p>Salvador, Bahia</p>
+			</div>
+		</div>
+	</div>
+
+    <div class="timeline__event animated fadeInUp timeline__event--type1">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1836 – 1837
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Sabinada
+			</div>
+			<div class="timeline__event__description">
+				<p>Salvador, Bahia</p>
+			</div>
+		</div>
+	</div>
+
+    <div class="timeline__event animated fadeInUp timeline__event--type1">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1838 – 1841
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Balaiada
+			</div>
+			<div class="timeline__event__description">
+				<p>Nordeste do Maranhão e extremo noroeste do Piauí</p>
+			</div>
+		</div>
+	</div>
+
+    <div class="timeline__event animated fadeInUp timeline__event--type1">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+            1848 - 1850
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Revolução Praieira
+			</div>
+			<div class="timeline__event__description">
+				<p>Alagoas e Pernambuco</p>
+			</div>
+		</div>
+	</div>
+
+    <div class="timeline__event animated fadeInUp timeline__event--type1">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+            1851 – 1852
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Revolta do Ronco da Abelha
+			</div>
+			<div class="timeline__event__description">
+				<p>Sergipe, Alagoas, Pernambuco, Paraíba e Ceará</p>
+			</div>
+		</div>
+	</div>
+
+    <div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1852
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Levante dos Marimbondos
+			</div>
+			<div class="timeline__event__description">
+				<p>Rio Grande do Norte, Alagoas, Pernambuco e Ceará</p>
+			</div>
+
+		</div>
+	</div>
+
+    <div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			        1872 – 1877
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Revolta do Quebra-Quilos
+			</div>
+			<div class="timeline__event__description">
+				<p>Piauí, Alagoas, Pernambuco, Paraíba, Rio Grande do Norte e Ceará</p>
+			</div>
+
+		</div>
+	</div>
+
+    <div class="timeline__event animated fadeInUp delay-1s timeline__event--type3">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1896 – 1897
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Guerra de Canudos
+			</div>
+			<div class="timeline__event__description">
+				<p>Canudos, Bahia</p>
+			</div>
+
+		</div>
+	</div>
+
+    <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1912
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Bombardeio de Salvador
+			</div>
+			<div class="timeline__event__description">
+				<p>Salvador, Bahia</p>
+			</div>
+		</div>
+	</div>
+
+    <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1914
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Sedição de Juazeiro
+			</div>
+			<div class="timeline__event__description">
+				<p>Ceará</p>
+			</div>
+		</div>
+	</div>
+
+    <div class="timeline__event animated fadeInUp delay-2s timeline__event--type2">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+			1930
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Território Livre de Princesa
+			</div>
+			<div class="timeline__event__description">
+				<p>Princesa Isabel, Manaíra, São José de Princesa, Paraíba</p>
+			</div>
+		</div>
+	</div>
+
+    <div class="timeline__event animated fadeInUp timeline__event--type1">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+            1934 - 1938
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Movimento de Pau de Colher
+			</div>
+			<div class="timeline__event__description">
+				<p>Casa Nova, Bahia</p>
+			</div>
+		</div>
+	</div>
+
+    <div class="timeline__event animated fadeInUp timeline__event--type1">
+		<div class="timeline__event__icon">
+			<!-- <i class="lni-sport"></i>-->
+
+		</div>
+		<div class="timeline__event__date">
+            1937
+		</div>
+		<div class="timeline__event__content">
+			<div class="timeline__event__title">
+				Caldeirão de Santa Cruz do Deserto
+			</div>
+			<div class="timeline__event__description">
+				<p>Crato, Ceará</p>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+    
+    
+         
+        <h3 style="padding-top: 50px;
+        padding-bottom: 0px;">Artigos Relacionados</h3>
+        <div class="artigos-relacionados">
+          <div class="artigo">
+            <h2>Carta de Princípios</h2>
+            <img class="#" src="imagens/carta-principios.jpg" alt="Carta de Princípios">
+            <p>Nossa carta de princípios, estabelece os valores fundamentais, crenças e objetivos do nordeste independente. Os princípios pelos quais nossas ações e decisões são baseadas.</p>
+            <a href="../carta-de-principios/carta-de-principios.html">Leia mais</a>
+          </div>
+          <div class="artigo">
+            <h2>Estatuto Oficial</h2>
+            <img class="#" src="" alt="">
+            <p>Nosso estatuto oficial é um documento jurídico que estabelece as regras, normas e regulamentos que regem nossa instituição. Define nossa estrutura organizacional, os direitos e deveres dos membros. Servindo como base legal para o funcionamento da entidade.</p>
+            <a href="../estatuto-oficial/estatuto-oficial.html">Leia mais</a>
+          </div>
+          <div class="artigo">
+            <h2>Perguntas e Respostas</h2>
+            <img class="#" src="" alt="">
+            <p>Veja algumas dúvidas mais comuns entre nossa comunidade. Ao responder às perguntas frequentes, buscamos compartilhar soluções para nossa região com base em estudos aprofundados.</p>
+            <a href="../principais-perguntas/perguntas.html">Leia mais</a>
+          </div>
+        </div>
+
+
+        <!--Rodapé do site-->
+
+        <footer>
+          <div id="footer_content">
+              <div id="footer_contacts">
+                   <img src="imagens/Logo-NEI-redimensionada-circular.png" class="img-footer"  alt="">
+              
+                  <div id="footer_social_media">
+                      <a href="#" class="footer-link" id="instagram">
+                          <i class="fa-brands fa-instagram"></i>
+                      </a>
+      
+                      <a href="#" class="footer-link" id="facebook">
+                          <i class="fa-brands fa-facebook-f"></i>
+                      </a>
+      
+                      <a href="#" class="footer-link" id="whatsapp">
+                          <i class="fa-brands fa-whatsapp"></i>
+                      </a>
+                  </div>
+              </div>
+              
+              <ul class="footer-list">
+                  <li>
+                      <h3>INSTITUCIONAL</h3>
+                  </li>
+                  <li>
+                      <a href="apresentacao.html" class="footer-link">Apresentação</a>
+                  </li>
+                  <li>
+                      <a href="../carta-de-principios/carta-de-principios.html" class="footer-link">Carta de Princípios</a>
+                  </li>
+                  <li>
+                      <a href="../estatuto-oficial/estatuto-oficial.html" class="footer-link">Estatuto Oficial</a>
+                  </li>
+              </ul>
+      
+              <ul class="footer-list">
+                  <li>
+                      <h3>CONTEÚDO</h3>
+                  </li>
+                  <li>
+                      <a href="#" class="footer-link">Biblioteca</a>
+                  </li>
+                  <li>
+                      <a href="#" class="footer-link">Notas Oficiais</a>
+                  </li>
+                  <li>
+                      <a href="../principais-perguntas/perguntas.html" class="footer-link">Perguntas e Respostas</a>
+                  </li>
+              </ul>
+      
+              <div id="footer_subscribe">
+                  <h3>INSCREVE-SE</h3>
+      
+                  <p>
+                      Cadastre-se para receber conteúdos exclusivos! Notícias sobre o movimento e outros informes. 
+                  </p>
+      
+                  <div id="input_group">
+                      <input type="email" id="email">
+                      <button>
+                          <i class="fa-regular fa-envelope"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+      
+          <div id="footer_copyright">
+              &#169 2023 Nordeste Independente
+          </div>
+      </footer>
+     
+</body>
+</html>

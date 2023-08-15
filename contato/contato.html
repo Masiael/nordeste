@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | NORDESTE INDEPENDENTE</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="imagens/bandeira-nei.jpg" type="image/x-icon">
+    <style>
+         
+         /* Estilos do formulário */
+    form {
+      max-width: 400px;
+      margin: 50px;
+      float: left; /* Adicionando a propriedade float */
+    }
+
+    label, input, textarea {
+      display: block;
+      margin-bottom: 10px;
+      width: auto;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #f5d522;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .contatos{
+        text-align: justify;
+    
+        
+    }
+    
+    </style>
+
+</head>
+<body>
+    <main>
+
+        <header class="cabecalho">
+          
+        </header>
+        <!--MENU DO SITE-->
+        
+        <nav class="menu">
+          <ul>
+            <li class="dropdown">
+             
+              <a href="../index.html">INÍCIO</a>
+    
+            </li>
+    
+            <li class="dropdown">
+             
+              <a href="#">NORDESTE INDEPENDENTE</a>
+              <ul class="dropdown-menu">
+                <li><a href="apresentacao/apresentacao.html">Apresentação</a></li>
+                <li><a href="#">Direção</a></li>
+                <li><a href="#">Conselho Diretivo Regional</a></li>
+                <li><a href="#">Produto 4</a></li>
+                <li><a href="#">Produto 5</a></li>
+    
+              </ul>
+            </li>
+    
+            <li class="dropdown">
+             
+              <a href="#">NOTÍCIAS</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Notícias do Movimento</a></li>
+                <li><a href="#">Opinões</a></li>
+                <li><a href="#">Produto 3</a></li>
+                <li><a href="#">Produto 4</a></li>
+                <li><a href="#">Produto 5</a></li>
+    
+              </ul>
+            </li>
+            
+            <li class="dropdown">
+             
+              <a href="#">HISTÓRIA</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Produto 1</a></li>
+                <li><a href="#">Produto 2</a></li>
+                <li><a href="#">Produto 3</a></li>
+                <li><a href="#">Produto 4</a></li>
+                <li><a href="#">Produto 5</a></li>
+    
+              </ul>
+            </li>
+    
+            <li class="dropdown">
+             
+              <a href="#">NORDESTE</a>
+              <ul class="dropdown-menu">
+                <li><a href="../nordeste-paginas/alagoas/alagoas.html">Alagoas</a></li>
+                <li><a href="../nordeste-paginas/bahia/bahia.html">Bahia</a></li>
+                <li><a href="../nordeste-paginas/ceara/ceara.html">Ceará</a></li>
+                <li><a href="../nordeste-paginas/maranhão/maranhao.html">Maranhão</a></li>
+                <li><a href="../nordeste-paginas/paraiba/paraiba.html">Paraíba</a></li>
+                <li><a href="../nordeste-paginas/pernambuco/pernambuco.html">Pernambuco</a></li>
+                <li><a href="../nordeste-paginas/piaui/piaui.html">Piauí</a></li>
+                <li><a href="../nordeste-paginas/rio-grande-norte/riogrande.html">Rio Grande do Norte</a></li>
+                <li><a href="../nordeste-paginas/sergipe/sergipe.html">Sergipe</a></li>
+    
+              </ul>
+    
+            </li>
+    
+            <li class="dropdown">
+             
+              <a href="#">FILIE-SE</a>
+              <ul class="dropdown-menu">
+                <li><a href="../filiacao/filiacao.html">Cadastro</a></li>
+              
+              </ul>
+            </li>
+    
+            <li class="dropdown">
+             
+              <a href="#">DOAÇÕES</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Produto 1</a></li>
+                <li><a href="#">Produto 2</a></li>
+                <li><a href="#">Produto 3</a></li>
+                <li><a href="#">Produto 4</a></li>
+                <li><a href="#">Produto 5</a></li>
+    
+              </ul>
+            </li>
+    
+            <li class="dropdown">
+             
+              <a href="#">LOJA</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Produto 1</a></li>
+                <li><a href="#">Produto 2</a></li>
+                <li><a href="#">Produto 3</a></li>
+                <li><a href="#">Produto 4</a></li>
+                <li><a href="#">Produto 5</a></li>
+    
+              </ul>
+            </li>
+    
+            <li class="dropdown">
+             
+              <a href="./contato.html">CONTATO</a>
+              <ul class="dropdown-menu">
+    
+              </ul>
+            </li>
+    
+          </ul>
+        
+        </nav>
+        
+        
+        <!--SEÇÃO PRINCIPAL DO SITE-->
+
+        <h1>Contato</h1>
+
+  <form action="processar_contato.php" method="POST">
+    <label for="solicitacao">Sua solicitação:</label>
+    <select id="solicitacao" name="solicitacao">
+      <option value="solicitacao1">Desejo esclarecimentos sobre o Movimento Nordeste Independente</option>
+      <option value="solicitacao2">Desejo esclarecimento sobre a História do Nordeste Independente</option>
+      <option value="solicitacao3">Desejo fazer uma solicitação</option>
+      <option value="solicitacao4">Desejo fazer uma crítica ao Movimento</option>
+      <option value="solicitacao5">Desejo entrar em contato por outros motivos</option>
+    </select>
+
+    <label for="nome">Nome Completo:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">E-mail Principal:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telefone">Telefone Principal:</label>
+    <input type="tel" id="telefone" name="telefone" required>
+
+    <label for="informacoes">Informações Adicionais:</label>
+    <textarea id="informacoes" name="informacoes"></textarea>
+
+    <button type="submit">Enviar Mensagem</button>
+
+    <p class="contatos"><em>Verifique se as informações acima estão corretas.</em></p>
+  </form>
+        
+    
+        
+        
+        <!--ÍCONES DE REDES SOCIAIS-->
+        <div class="social-icons">
+        
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="instagram-icon"><img src="img-midias/instagram.png" alt="Ícone do Instagram" width="32px" height="32px"></a>
+        
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="facebook-icon"><img src="img-midias/facebook.png" alt="Ícone do Facebook" width="32px" height="32px"></a>
+        
+            <a href="https://twitter.com/" target="_blank" rel="noopener" class="twitter-icon"><img src="img-midias/twitter.png" alt="Ícone do Twitter" width="32px" height="32px"></a>
+        
+          </div>
+        
+         <!--Rodapé do site-->
+      
+      </main>
+    
+      <!-- <div class="footer">
+        <footer">
+          &copy; 2023 - Nordeste Independente. Todos os direitos reservados.
+        </footer>
+      </div> !-->
+    
+</body>
+</html>
